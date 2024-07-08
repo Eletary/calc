@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肉鸽计算器 by ppip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .column {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .column:last-child {
+            margin-right: 0;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input[type="checkbox"],
+        .input-group input[type="number"] {
+            margin-right: 10px;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        .result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .input-group {
+            display: inline-block;
+            width: 30%;
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input[type="checkbox"],
+        .input-group input[type="number"] {
+            margin-right: 10px;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        .category h2 {
+            margin-bottom: 10px;
+        }
+        .result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+                <h1>萨米肉鸽仙术杯计算器</h1>
+        <div class="row">
+            <div class="column">
+
+                <div class="category">
+                    <h2>01 临时招募</h2>
+                    <div class="input-group">
+                        <label for="sixStar">六星干员数量:</label>
+                        <input type="number" id="sixStar" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="fiveStar">五星干员数量:</label>
+                        <input type="number" id="fiveStar" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="fourStar">四星干员数量:</label>
+                        <input type="number" id="fourStar" value="0">
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>02 结局</h2>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="finalEnding"> 34结局无树洞</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>03 通关关卡</h2>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="samizhi"> 萨米之熵</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="shenhanzhaoxiang"> 深寒造像</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="yuanding"> 园丁</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="xuwuzhiou"> 虚无之偶</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="mairuyongheng"> 迈入永恒</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="shaobing"> 哨兵</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="shiguangzhisha"> 时光之沙</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>04 紧急关卡</h2>
+                    <div class="input-group">
+                        <label>冰海疑影:</label>
+                        <input type="number" id="emergency3" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>公司纠葛:</label>
+                        <input type="number" id="emergency4_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>坍缩体的午后:</label>
+                        <input type="number" id="emergency4_2" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>人造物狂欢节:</label>
+                        <input type="number" id="emergency5_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>本能污染:</label>
+                        <input type="number" id="emergency5_2" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>亡者行军:</label>
+                        <input type="number" id="emergency5_3" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>乐理之灾:</label>
+                        <input type="number" id="emergency5_4" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>生灵的终点:</label>
+                        <input type="number" id="emergency6" value="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="category">
+                    <h2>05 紧急关卡（路网+无漏）</h2>
+                    <div class="input-group">
+                        <label>冰海疑影:</label>
+                        <input type="number" id="lemergency3" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>公司纠葛:</label>
+                        <input type="number" id="lemergency4_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>人造物狂欢节:</label>
+                        <input type="number" id="lemergency5_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>亡者行军:</label>
+                        <input type="number" id="lemergency5_3" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>乐理之灾:</label>
+                        <input type="number" id="lemergency5_4" value="0">
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>06 隐藏关卡</h2>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="hiddenBoss3_1"> 大地醒转</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="hiddenBoss3_2"> 呼吸</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="hiddenBoss3_3"> 夺树者</label>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" id="hidden1"> 豪华车队（击杀熊）</label>
+                    </div>
+                    <div class="input-group">
+                        <label>正义使者（无漏）：</label>
+                        <input type="checkbox" id="hidden2_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>正义使者（仅通关）：</label>
+                        <input type="checkbox" id="hidden2_2" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>正义使者狗/鸭/熊:</label>
+                        <input type="number" id="hidden2_3" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>英雄无名（无漏）：</label>
+                        <input type="checkbox" id="hidden3_1" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>英雄无名（仅通关）：</label>
+                        <input type="checkbox" id="hidden3_2" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>英雄无名击杀数：</label>
+                        <input type="number" id="hidden3_3" value="0">
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>07 其他</h2>
+                    <div class="input-group">
+                        <label>狗/鸭/熊击杀总数:</label>
+                        <input type="number" id="animals" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>藏品数量:</label>
+                        <input type="number" id="extra_collections" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>宣言板数量:</label>
+                        <input type="number" id="extra_declarations" value="0">
+                    </div>
+                    <div class="input-group">
+                        <label>结算分:</label>
+                        <input type="number" id="score" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 id="result" class="result">得分：0！</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', calculateScore);
+        });
+
+        function calculateScore() {
+            let sixStar = parseInt(document.getElementById('sixStar').value) || 0;
+            let fiveStar = parseInt(document.getElementById('fiveStar').value) || 0;
+            let fourStar = parseInt(document.getElementById('fourStar').value) || 0;
+
+            let finalEnding = document.getElementById('finalEnding').checked ? 150:0;
+
+            let samizhi = document.getElementById('samizhi').checked ? 30 : 0;
+            let shenhanzhaoxiang = document.getElementById('shenhanzhaoxiang').checked ? 150 : 0;
+            let yuanding = document.getElementById('yuanding').checked ? 50 : 0;
+            let xuwuzhiou = document.getElementById('xuwuzhiou').checked ? 120 : 0;
+            let mairuyongheng = document.getElementById('mairuyongheng').checked ? 150 : 0;
+            let shaobing = document.getElementById('shaobing').checked ? 300 : 0;
+            let shiguangzhisha = document.getElementById('shiguangzhisha').checked ? 100 : 0;
+
+
+            let emergency3 = parseInt(document.getElementById('emergency3').value) || 0;
+            let emergency4_1 = parseInt(document.getElementById('emergency4_1').value) || 0;
+            let emergency4_2 = parseInt(document.getElementById('emergency4_2').value) || 0;
+            let emergency5_1 = parseInt(document.getElementById('emergency5_1').value) || 0;
+            let emergency5_2 = parseInt(document.getElementById('emergency5_2').value) || 0;
+            let emergency5_3 = parseInt(document.getElementById('emergency5_3').value) || 0;
+            let emergency5_4 = parseInt(document.getElementById('emergency5_4').value) || 0;
+            let emergency6 = parseInt(document.getElementById('emergency6').value) || 0;
+            let lemergency3 = parseInt(document.getElementById('lemergency3').value) || 0;
+            let lemergency4_1 = parseInt(document.getElementById('lemergency4_1').value) || 0;
+            let lemergency5_1 = parseInt(document.getElementById('lemergency5_1').value) || 0;
+            let lemergency5_3 = parseInt(document.getElementById('lemergency5_3').value) || 0;
+            let lemergency5_4 = parseInt(document.getElementById('lemergency5_4').value) || 0;
+
+            let hiddenBoss3_1 = document.getElementById('hiddenBoss3_1').checked ? 50 : 0;
+            let hiddenBoss3_2 = document.getElementById('hiddenBoss3_2').checked ? 50 : 0;
+            let hiddenBoss3_3 = document.getElementById('hiddenBoss3_3').checked ? 50 : 0;
+            let hidden1 = document.getElementById('hidden1').checked ? 40 : 0;
+            let hidden2_1 = document.getElementById('hidden2_1').checked ? 200 : 0;
+            let hidden2_2 = document.getElementById('hidden2_2').checked ? 70 : 0;
+            let hidden2_3 = parseInt(document.getElementById('hidden2_3').value) || 0;
+            let hidden3_1 = document.getElementById('hidden3_1').checked ? 150 : 0;
+            let hidden3_2 = document.getElementById('hidden3_2').checked ? 30 : 0;
+            let hidden3_3 = parseInt(document.getElementById('hidden3_3').value) || 0;
+            console.log(hidden3_3);
+            let animals = parseInt(document.getElementById('animals').value) || 0;
+            let extra_collections = parseInt(document.getElementById('extra_collections').value) || 0;
+            let extra_declarations = parseInt(document.getElementById('extra_declarations').value) || 0;
+            let score = parseInt(document.getElementById('score').value) || 0;
+
+            // Example score calculations, replace with actual logic
+            let totalScore = 
+                (sixStar * 50) + 
+                (fiveStar * 20) + 
+                (fourStar * 10) + 
+                (samizhi) + 
+                (shenhanzhaoxiang) + 
+                (yuanding ) + 
+                (xuwuzhiou ) + 
+                (mairuyongheng ) + 
+                (shaobing ) + 
+                (shiguangzhisha ) + 
+                (finalEnding) +
+                (emergency3 * 20) + 
+                (emergency4_1 * 20) + 
+                (emergency4_2 * 20) +
+                (emergency5_1 * 90) +
+                (emergency5_2 * 50) +
+                (emergency5_3 * 50) +
+                (emergency5_4 * 35) +
+                (emergency6 * 90) +
+                (lemergency3 * 30) + 
+                (lemergency4_1 * 30) + 
+                (lemergency5_1 * 110) +
+                (lemergency5_3 * 70) +
+                (lemergency5_4 * 55) +
+                (hiddenBoss3_1) +
+                (hiddenBoss3_2) +
+                (hiddenBoss3_3) +
+                (hidden1) +
+                (hidden2_1 ? hidden2_1 : hidden2_2 + hidden2_3 * 30) +
+                (hidden3_1 ? hidden3_1 : hidden3_2 + hidden3_3 * 15) +
+                (animals * 20) +
+                (extra_collections * 10) +
+                (extra_declarations *  5) +
+                (score);
+            if ((samizhi || xuwuzhiou || shenhanzhaoxiang) && (mairuyongheng || shiguangzhisha)) totalScore += 100;
+            document.getElementById('result').innerText = '得分：' + totalScore+'！';
+        }
+    </script>
+</body>
+</html>
